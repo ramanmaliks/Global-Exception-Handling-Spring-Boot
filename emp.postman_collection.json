@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "emp",
+		"_postman_id": "67cd0551-ab0b-e248-e3dc-2ea5c8df660d",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EMPLOYEE ADD NEW",
+			"request": {
+				"url": "http://localhost:8080/emp/emp",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":1,\n\t\"empName\":\"\",\n\t\"empCity\":\"Bhopal\"\n}"
+				},
+				"description": "New Employee\n\n\n{\n\t\"empName\":\"Raman\",\n\t\"empCity\":\"Bhopal\"\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "EMPLOYEE SEARCH ALL",
+			"request": {
+				"url": "http://localhost:8080/emp/emp",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get All Employees"
+			},
+			"response": []
+		},
+		{
+			"name": "EMPLOYEE SEARCH BY ID",
+			"request": {
+				"url": "http://localhost:8080/emp/emp/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get Emp by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "EMPLOYEE UPDATE REQUEST",
+			"request": {
+				"url": "http://localhost:8080/emp/emp/2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":\"1\",\n\t\"empName\": \"Updated Raman\",\n    \"empCity\": \"Updated Bhopal\"\n}"
+				},
+				"description": "Update Employee\n\nBODY : RAY\nTYPE : JSON\n{\n\t\"empName\": \"Updated Raman\",\n    \"empCity\": \"Updated Bhopal\"\n}"
+			},
+			"response": []
+		},
+		{
+			"name": "EMPLOYEE DELETE BY ID ",
+			"request": {
+				"url": "http://localhost:8080/emp/emp/2",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": "DELETE Emp by ID"
+			},
+			"response": []
+		}
+	]
+}
