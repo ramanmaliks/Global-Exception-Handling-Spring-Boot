@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.springframework.http.ResponseEntity;
+
 import com.raman.empdemo.entity.Employee;
 
 public interface EmployeeServiceInterface {
@@ -13,11 +15,11 @@ public interface EmployeeServiceInterface {
 
 	public List<Employee> viewEmp();
 
-	public Optional<Employee> viewEmpById(Long id);
+	public Employee viewEmpById(Long id);
 
 	public Employee updateEmp(Long id, @Valid Employee emp);
 
-	public Boolean deleteEmp(Long id);
+	public void deleteEmp(Long id);
 
 	
 
